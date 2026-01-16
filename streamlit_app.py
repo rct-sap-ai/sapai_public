@@ -1,5 +1,19 @@
 import streamlit as st
 
+import subprocess
+import sys
+import os
+
+# Install private repo at runtime
+if 'sap_autocode' not in sys.modules:
+    token = os.environ.get('GITHUB_TOKEN')
+    if token:
+        subprocess.check_call([
+            sys.executable, "-m", "pip", "install", 
+            f"git+https://{token}@github.com/rct-sap-ai/sap-kcl.git@main"
+        ])
+
+import streamlit as st
 st.set_page_config(
     page_title="SAP AutoCode",
     page_icon="📊",
