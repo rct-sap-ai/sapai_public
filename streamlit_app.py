@@ -1,23 +1,19 @@
 import streamlit as st
 
-# Configure page
 st.set_page_config(
     page_title="SAP AutoCode",
     page_icon="📊",
     layout="wide"
 )
 
-# Header with KCL branding
 st.title("🏥 KCL Clinical Trials Unit")
 st.header("SAP AutoCode System")
 st.markdown("Automated Statistical Analysis Plan translation and validation")
 
-# Sidebar
 with st.sidebar:
     st.markdown("### About")
     st.markdown("This tool translates Statistical Analysis Plans into structured, machine-readable formats.")
 
-# Main interface
 tab1, tab2 = st.tabs(["Upload SAP", "About"])
 
 with tab1:
@@ -32,7 +28,6 @@ with tab1:
         
         if st.button("Parse SAP", type="primary"):
             with st.spinner("Processing SAP..."):
-                # This is where you'll call your private repo code
                 st.info("Processing functionality will be connected to the backend")
                 
 with tab2:
@@ -46,8 +41,3 @@ with tab2:
     
     **Developed by:** King's College London Clinical Trials Unit
     """)
-```
-
-And here's `requirements.txt`:
-```
-streamlit>=1.30.0
