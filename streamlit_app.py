@@ -12,7 +12,7 @@ st.markdown("Automated Statistical Analysis Plan translation and validation")
 
 with st.sidebar:
     st.markdown("### About")
-    st.markdown("This tool translates Statistical Analysis Plans into structured, machine-readable formats.")
+    st.markdown("This tool translates Statistical Analysis Plans into structured, machine readable formats.")
 
 tab1, tab2 = st.tabs(["Upload SAP", "About"])
 
